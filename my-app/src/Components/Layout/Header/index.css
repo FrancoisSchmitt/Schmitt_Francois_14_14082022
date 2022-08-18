@@ -1,0 +1,11 @@
+.main-nav {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+}
+
+.main-nav-item {
+      margin-right: 1rem;
+}

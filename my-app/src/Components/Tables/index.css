@@ -1,0 +1,10 @@
+.test {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-bottom: 2%;
+}
+
+.flex {
+      display: flex;
+      flex-direction: column;
+}
