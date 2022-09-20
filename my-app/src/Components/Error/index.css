@@ -1,0 +1,40 @@
+.Error-type,
+.Error-desc,
+.Error-link {
+    color: white;
+}
+.main.bg-dark{
+    background-color: #577004;
+    height: 71.5vh;
+    margin-top: 2%;
+    padding-top: 2%;
+}
+.Error-type {
+    font-size: 160px;
+    font-weight: 700;
+    margin-bottom: -2%;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Error-desc,
+.Error-link {
+    font-size: 45px;
+    /* margin-top: -5%; */
+    font-weight: 500;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Error-type, .Error-desc{
+    text-align: center;
+}
+.Error-link {
+    text-decoration: none;
+}
+
+.Error-link:hover {
+    text-decoration: underline;
+}
+

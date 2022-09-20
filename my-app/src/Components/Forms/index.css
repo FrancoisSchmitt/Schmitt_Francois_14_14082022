@@ -1,26 +1,12 @@
 .form {
-      display: flex;
-      flex-direction: column;
-      background-color: #bcc2d0;
+      background-color: #577004;
       width: 100%;
-}
-
-.form-title {
-      text-align: center;
-}
-
-.rounded-form {
-      width: 85%;
-      margin-left: auto;
-      margin-right: auto;
-      border-radius: 10px;
-      background-color: #ffffff;
-      margin-top: 2%;
-      margin-bottom: 2%;
+      height: auto;
 }
 
 .form-btn {
-      background-color: #4263ff;
+      background-color: #3d4e03;
+      font-size: 16px;
       color: white;
       border: none;
       border-radius: 5px;
@@ -32,27 +18,17 @@
       margin-top: 2%;
 }
 
-.form-content {
-      display: flex;
-      flex-direction: column;
-      width: 30%;
-}
-
-.test {
-      display: flex;
-      flex-direction: row;
-}
-
 input,
 select {
-      margin-bottom: 5%;
       height: 30px;
-      border: none;
+      border: 2px solid black;
       border-radius: 5px;
-      background-color: #e6e8ef;
-      margin-top: 2%;
+      width: 100%;
 }
-
+label {
+      font-weight: bold;
+      margin-bottom: 3%;
+}
 input::placeholder {
       padding-left: 3%;
 }
@@ -60,14 +36,71 @@ input::placeholder {
 form {
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      width: 75%;
+      width: 38%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #fff;
+      align-items: center;
+      margin-top: 2%;
+      /* margin-bottom: 10%; */
+      border-radius: 8px;
+}
+
+.main-user-box {
+      width: 90%;
+}
+
+h2 {
+      border-bottom: 1px solid black;
+      width: 90%;
       margin-left: auto;
       margin-right: auto;
 }
 
-.form-container {
+.user-box-service {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5%;
+      width: 90%;
+      margin-left: auto;
+      justify-content: center;
+      margin-right: auto;
+}
+.name-user-box,
+.date-user-box {
       display: flex;
       justify-content: space-around;
-      flex-direction: row;
+      width: 100%;
+      align-items: center;
+}
+
+.user-box {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 5%;
+      width: 40%;
+}
+
+small {
+      color: red;
+      font-weight: bold;
+}
+
+.form-title {
+      text-align: center;
+      color: #fff;
+      margin-top: 2%;
+      padding-top: 2%;
+}
+
+.modal-section {
+      padding-top: 20.5%;
+}
+
+.btn-close {
+      background-color: #3d4e03 !important;
+      font-size: 16px !important;
+}
+.modal-paragraphe {
+      text-align: center;
 }

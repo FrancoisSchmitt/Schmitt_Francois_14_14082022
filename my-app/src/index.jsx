@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+import './index.css';
 
 import { Provider } from 'react-redux';
 import { store } from './Store';
 
 import Header from '../../my-app/src/Components/Layout/Header';
+import Footer from '../../my-app/src/Components/Layout/Footer';
 import EmpoyeeCreate from './Pages/EmployeeCreate';
 import EmployeeList from './Pages/EmployeeList';
-
+import Error404 from './Pages/Error404';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
       <React.StrictMode>
@@ -22,7 +24,10 @@ root.render(
                                     path="/Employee-list"
                                     element={<EmployeeList />}
                               />
+                              <Route path="*" element={<Error404 />} />
+                              <Route path="/404" element={<Error404 />} />
                         </Routes>
+                        <Footer />
                         {/* <Footer /> */}
                   </BrowserRouter>
             </Provider>

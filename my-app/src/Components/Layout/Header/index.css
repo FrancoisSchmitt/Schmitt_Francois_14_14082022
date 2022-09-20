@@ -9,3 +9,37 @@
 .main-nav-item {
       margin-right: 1rem;
 }
+
+.nav-link,
+.nav-link-logo {
+      width: 25%;
+}
+
+.nav-link {
+      display: flex;
+      justify-content: space-around;
+      font-size: 17px;
+      color: black;
+}
+
+.nav-link a {
+      font-size: 17px;
+      color: #6d767e;
+      text-decoration: none;
+}
+.active {
+      border-bottom: #6d767e 2px solid;
+}
+
+.main-nav-item-home.active {
+      border: none;
+}
+
+img {
+      height: 100px;
+}
+
+.nav-title {
+      text-align: center;
+      color: #5a6f07;
+}

@@ -1,7 +1,5 @@
-.test {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      margin-bottom: 2%;
+.section-table {
+      padding-top: 2%;
 }
 
 .flex {
