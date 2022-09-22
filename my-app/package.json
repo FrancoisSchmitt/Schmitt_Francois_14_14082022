@@ -20,6 +20,8 @@
             "react-router-dom": "^6.3.0",
             "react-scripts": "5.0.1",
             "react-select": "^5.4.0",
+            "redux": "^4.2.0",
+            "redux-persist": "^6.0.0",
             "simple-component-library": "^0.1.0",
             "simple-component-library-modal": "^0.9.28",
             "simple-modal-library": "^0.2.0",

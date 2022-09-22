@@ -6,17 +6,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import Select from 'react-select';
 import { useDispatch } from 'react-redux';
-import {
-      getFirstName,
-      getLastName,
-      getBirthdate,
-      getStartDay,
-      getSelect,
-      getStreet,
-      getState,
-      getCity,
-      getZipCode,
-} from '../../Store';
+import { addEmployee } from '../../Store/actions';
 import { states } from './data';
 import { newDepartement } from './data';
 
@@ -146,19 +136,23 @@ export default function Forms() {
                   inputIsFilled(startDate) &&
                   inputIsFilled(departement)
             ) {
-                  const user = {
-                        FirstName: dispatch(getFirstName(firstName)),
-                        LastName: dispatch(getLastName(lastName)),
-                        DateOfBirthdate: dispatch(getBirthdate(birthdate)),
-                        StartDate: dispatch(getStartDay(startDate)),
-                        Departement: dispatch(getSelect(departement)),
-                        Street: dispatch(getStreet(street)),
-                        City: dispatch(getCity(city)),
-                        State: dispatch(getState(state)),
-                        ZipCode: dispatch(getZipCode(zipCode)),
-                  };
+                  // const user = {
+                  dispatch(
+                        addEmployee({
+                              FirstName: firstName,
+                              LastName: lastName,
+                              DateOfBirthdate: birthdate,
+                              StartDate: startDate,
+                              Departement: departement,
+                              Street: street,
+                              City: city,
+                              State: state,
+                              ZipCode: zipCode,
+                        })
+                  );
+                  // };
 
-                  setNewData([...newData, user]);
+                  // setNewData([...newData, user]);
                   initialStates();
                   setErrorMessage(false);
                   setNewOpenModal(true);

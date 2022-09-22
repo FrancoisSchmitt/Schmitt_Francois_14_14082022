@@ -2,7 +2,9 @@
 import React from 'react';
 import MUIDataTable from 'mui-datatables';
 import { columns } from './Columns';
-import './index.css'
+
+import './index.css';
+import { useSelector } from 'react-redux';
 
 const DataTableEmployee = () => {
       const options = {
@@ -23,21 +25,24 @@ const DataTableEmployee = () => {
                   return [];
             }
       };
+
+      const employees = useSelector((state) => state?.employee?.data);
+      console.log(employees);
       const employeesArray = [];
       const newData = dataFromLocalStorage();
       console.log(newData);
 
-      newData.map((employee) => {
+      employees.map((employee) => {
             const data = [
-                  employee?.LastName?.payload,
-                  employee?.FirstName?.payload,
-                  employee?.DateOfBirthdate?.payload,
-                  employee?.Street?.payload,
-                  employee?.City?.payload,
-                  employee?.State?.payload,
-                  employee?.ZipCode?.payload,
-                  employee?.Departement?.payload,
-                  employee?.StartDate?.payload,
+                  employee?.LastName,
+                  employee?.FirstName,
+                  employee?.DateOfBirthdate,
+                  employee?.Street,
+                  employee?.City,
+                  employee?.State,
+                  employee?.ZipCode,
+                  employee?.Departement,
+                  employee?.StartDate,
             ];
             employeesArray.push(data);
       });
@@ -45,13 +50,13 @@ const DataTableEmployee = () => {
       const data = employeesArray;
 
       return (
-            <section className='section-table'>
-            <MUIDataTable
-                  id="MUIDataTable"
-                  className="container"
-                  data={data}
-                  columns={columns}
-                  options={options}
+            <section className="section-table">
+                  <MUIDataTable
+                        id="MUIDataTable"
+                        className="container"
+                        data={data}
+                        columns={columns}
+                        options={options}
                   />
             </section>
       );
