@@ -7,7 +7,7 @@ export default function Header() {
                   <nav className="main-nav">
                         <div className="nav-link-logo">
                               <NavLink className="main-nav-item-home" to="/">
-                                    <img src={logo} alt="Logo Of WebSite" />
+                                    <img className="image"src={logo} alt="Logo Of WebSite" />
                               </NavLink>
                         </div>
                         <h1 className="nav-title">HRNET</h1>
@@ -15,7 +15,6 @@ export default function Header() {
                               <NavLink
                                     className="main-nav-item"
                                     to="/"
-                                    // activeclassname="selected"
                               >
                                     <i className="fa fa-user-circle"></i>
                                     Create employee
@@ -23,7 +22,6 @@ export default function Header() {
                               <NavLink
                                     className="main-nav-item"
                                     to="/Employee-list"
-                                    // activeclassname="selected"
                               >
                                     <i className="fa fa-user-circle"></i>
                                     Employee list

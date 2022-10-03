@@ -1,3 +1,6 @@
+/**
+ * @const employee switch to know if ADD_EMPLOYEE is called if it is the case we iterate in the table data
+ */
 const initialState = {
       data: [],
 };

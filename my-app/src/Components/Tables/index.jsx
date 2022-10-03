@@ -6,10 +6,13 @@ import { columns } from './Columns';
 import './index.css';
 import { useSelector } from 'react-redux';
 
+/**
+ * 
+ * @const DataTableEmployee Table parameter
+ */
 const DataTableEmployee = () => {
       const options = {
             filter: false,
-
             download: false,
             selectableRowsHideCheckboxes: true,
             selectableRowsHeader: true,
@@ -17,21 +20,12 @@ const DataTableEmployee = () => {
             viewColumns: false,
             onRowsDelete: false,
       };
-      const dataFromLocalStorage = () => {
-            const dataLS = localStorage.getItem('reduxState');
-            if (dataLS) {
-                  return JSON.parse(dataLS);
-            } else {
-                  return [];
-            }
-      };
+    /**
+     * recover all data save in redux 
+     */
 
       const employees = useSelector((state) => state?.employee?.data);
-      console.log(employees);
       const employeesArray = [];
-      const newData = dataFromLocalStorage();
-      console.log(newData);
-
       employees.map((employee) => {
             const data = [
                   employee?.LastName,

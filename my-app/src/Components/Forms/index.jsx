@@ -1,5 +1,6 @@
+
 import './index.css';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Modal } from 'simple-component-library-modal';
 
 import DatePicker from 'react-datepicker';
@@ -12,23 +13,11 @@ import { newDepartement } from './data';
 
 export default function Forms() {
       const dispatch = useDispatch();
-      /**
-       *
-       * @const dataFromLocalStorage return all value in local storage
-       */
-      const dataFromLocalStorage = () => {
-            const dataLS = localStorage.getItem('reduxState');
-            if (dataLS) {
-                  return JSON.parse(dataLS);
-            } else {
-                  return [];
-            }
-      };
+      
 
       /**
        * all state i using for my form
        */
-      const [newData, setNewData] = useState(dataFromLocalStorage());
       const [errorMessage, setErrorMessage] = useState(false);
       const [newOpenModal, setNewOpenModal] = useState(false);
 
@@ -136,7 +125,7 @@ export default function Forms() {
                   inputIsFilled(startDate) &&
                   inputIsFilled(departement)
             ) {
-                  // const user = {
+
                   dispatch(
                         addEmployee({
                               FirstName: firstName,
@@ -150,9 +139,7 @@ export default function Forms() {
                               ZipCode: zipCode,
                         })
                   );
-                  // };
 
-                  // setNewData([...newData, user]);
                   initialStates();
                   setErrorMessage(false);
                   setNewOpenModal(true);
@@ -161,9 +148,6 @@ export default function Forms() {
             }
       };
 
-      useEffect(() => {
-            localStorage.setItem('reduxState', JSON.stringify(newData));
-      }, [newData]);
 
       return (
             <section className="form">

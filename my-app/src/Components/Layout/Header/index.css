@@ -43,3 +43,50 @@ img {
       text-align: center;
       color: #5a6f07;
 }
+
+.image{
+      width: 30%;
+            /* or max-width: 100%; */
+            height: auto;
+}
+
+
+@media only screen and (max-width: 375px) {
+      .main-nav{
+            justify-content: space-around;
+      }
+      .nav-title, .nav-link a{
+            font-size: 15px;
+      }
+ .nav-link {
+       width: 60%;
+ }
+      .nav-link-logo{
+            width: 10%;
+      }
+             .nav-link-logo a img{
+                   width: 100%;
+                   height: auto;
+             }
+}
+
+
+@media only screen and (min-width: 376px) and (max-width: 810px) {
+      .main-nav {
+                  justify-content: space-around;
+            }
+            .nav-title{
+                  margin-right: auto;
+            }
+      .nav-link{
+            width: 30%;
+      }
+            .nav-link-logo {
+                  width: 10%;
+            }
+      
+            .nav-link-logo a img {
+                  width: 100%;
+                  height: auto;
+            }
+}
